@@ -4,7 +4,7 @@ var gulp = require('gulp')
 
 // Compile the source file to es6 using Babel
 gulp.task('default', function () {
-    gulp.src('./src/ontap.js')
+    gulp.src('./src/onetap.js')
         .pipe(babel())
     .pipe(gulp.dest('./onetap.js'));
 });
