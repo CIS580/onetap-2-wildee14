@@ -3,12 +3,12 @@
 /* Classes */
 const Game = require('./game.js');
 const Player = require('./player.js');
-
+const Enemy = require('./enemy.js');
 /* Global variables */
 var canvas = document.getElementById('screen');
 var game = new Game(canvas, update, render);
 var player = new Player({x: 382, y: 460})
-
+var enemy = new Enemy({x: 100, y: 100})
 /**
  * @function masterLoop
  * Advances the game in sync with the refresh rate of the screen
@@ -45,4 +45,5 @@ function render(elapsedTime, ctx) {
   ctx.fillStyle = "lightblue";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   player.render(elapsedTime, ctx);
+  enemy.render(elapsedTime, ctx);
 }
